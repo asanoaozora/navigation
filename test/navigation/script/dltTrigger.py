@@ -1,17 +1,18 @@
-#!/usr/bin/python
+#!/usr/bin/python3
+# -*- coding: latin-1 -*-
 
 """
 **************************************************************************
 * @licence app begin@
 * SPDX-License-Identifier: MPL-2.0
 *
-* \copyright Copyright (C) 201, PSA GROUPE
+* @copyright Copyright (C) 201, PSA GROUPE
 *
 * \file dlt-trigger.py
 *
 * \brief This script is part of the FSA scenario.
 *
-* \author Philippe Colliot <philippe.colliot@mpsa.com>
+* \author Philippe Colliot <philippe.colliot@stellantis.com>
 *
 * \version 1.0
 *
@@ -25,18 +26,21 @@
 
 **************************************************************************
 """
-import subprocess,os
-from subprocess import call 
 
-PATH_TEST_TRIGGER='../dlt-triggers/bin/'
+import os
+from subprocess import call
 
-def startTrigger(name): 
-	FNULL = open(os.devnull,'w')
-	test_trigger=PATH_TEST_TRIGGER + 'test-trigger'
+
+PATH_TEST_TRIGGER = '../dlt-triggers/bin/'
+
+
+def startTrigger(name):
+	FNULL = open(os.devnull, 'w')
+	test_trigger = PATH_TEST_TRIGGER + 'test-trigger'
 	call([test_trigger, "1", name])
 
-def stopTrigger(name): 
-	FNULL = open(os.devnull,'w')
-	test_trigger=PATH_TEST_TRIGGER + 'test-trigger'
-	call([test_trigger, "0", name])
 
+def stopTrigger(name):
+	FNULL = open(os.devnull, 'w')
+	test_trigger = PATH_TEST_TRIGGER + 'test-trigger'
+	call([test_trigger, "0", name])

@@ -39,7 +39,7 @@ then
 	./test-guidance.py -r ../resource/route.xml $remote
 	if [ "$remote" = "" ]
 	then
-	./test-map-viewer-control.py -l ../resource/location.xml $remote
+		./test-map-viewer-control.py -l ../resource/location.xml $remote
 	fi
 else
 	result="$(./test-location-input.py -l ../resource/locations.xml $remote 2>&1 >/dev/null)"

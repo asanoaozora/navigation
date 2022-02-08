@@ -1619,10 +1619,10 @@ MapViewerControlObj::ConvertGeoCoordsToPixelCoords(uint32_t sessionHandle, const
 		g.lat=it->_1;
 		g.lng=it->_2;
 		transform_from_geo(projection_mg, &g, &c);
-		transform(trans, projection_mg, &c, &p, 1, 0, 0, NULL);
+        transform_point(trans, projection_mg, &c, &p);
 		pixelCoordinate._1=p.x;
 		pixelCoordinate._2=p.y;
-		pixelCoordinates.push_back(pixelCoordinate);
+        pixelCoordinates.push_back(pixelCoordinate);
 	}
 }
 
