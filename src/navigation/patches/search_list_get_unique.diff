@@ -1,10 +1,8 @@
-Index: navit/navit/search.c
-===================================================================
---- navit/search.c	(revision 5827)
-+++ navit/search.c	(working copy)
-@@ -1048,3 +1048,138 @@
- search_init(void)
- {
+--- navit/navit/search.c.orig	2022-02-16 16:55:55.702019321 +0100
++++ navit/navit/search.c	2022-02-16 16:55:55.958147659 +0100
+@@ -965,3 +965,138 @@
+ 
+ void search_init(void) {
  }
 +
 +// The following code has been removed into the release 5549

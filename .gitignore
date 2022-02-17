@@ -13,5 +13,4 @@ build
 *.pro.user*
 *.txt.user*
 /.project
-
-
+/test/navigation/script/.vscode/launch.json

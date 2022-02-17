@@ -1,8 +1,6 @@
-Index: navit/navit/navit.c
-===================================================================
---- navit/navit.c	(revision 5827)
-+++ navit/navit.c	(working copy)
-@@ -2229,12 +2229,12 @@ static int navit_get_cursor_pnt(struct navit *this_, struct point *p, int keep_o
+--- navit/navit/navit.c.orig	2022-02-16 16:55:55.674005283 +0100
++++ navit/navit/navit.c	2022-02-17 11:53:41.937191527 +0100
+@@ -2436,12 +2436,12 @@
          offset = (max_offset - min_offset) / (max_offset_speed - min_offset_speed) * (nv->speed - min_offset_speed);
      }
  #endif
@@ -17,3 +15,14 @@ Index: navit/navit/navit.c
      transform_get_size(this_->trans, &width, &height);
      dbg(lvl_debug, "width=%d height=%d", width, height);
  
+@@ -3524,7 +3524,9 @@
+     int year, month, day;
+     int after_sunrise = FALSE;
+     int after_sunset = FALSE;
+-    int tunnel = tracking_get_current_tunnel(n->tracking);
++    int tunnel = 0;
++    if (n->tracking)
++        tunnel = tracking_get_current_tunnel(n->tracking);
+ 
+     if (navit_get_attr(n,attr_layout,&layout_attr,NULL)!=1) {
+         return; //No layout - nothing to switch

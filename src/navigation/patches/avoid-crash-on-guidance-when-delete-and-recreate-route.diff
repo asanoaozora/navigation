@@ -1,8 +1,6 @@
-Index: navit/navit/route.c
-===================================================================
---- navit/route.c	(revision 5827)
-+++ navit/route.c	(working copy)
-@@ -3926,7 +3926,7 @@ int route_remove_attr(struct route *this_, struct attr *attr) {
+--- navit/navit/route.c.orig	2022-02-16 16:55:55.694015310 +0100
++++ navit/navit/route.c	2022-02-16 16:55:55.962149664 +0100
+@@ -4263,7 +4263,7 @@
      dbg(lvl_debug,"enter");
      switch (attr->type) {
      case attr_callback:
