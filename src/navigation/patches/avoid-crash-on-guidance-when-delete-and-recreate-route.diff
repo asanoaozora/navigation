@@ -1,5 +1,5 @@
---- navit/navit/route.c.orig	2022-02-16 16:55:55.694015310 +0100
-+++ navit/navit/route.c	2022-02-16 16:55:55.962149664 +0100
+--- navit/route.c	2022-02-16 16:55:55.694015310 +0100
++++ navit/route.c	2022-02-16 16:55:55.962149664 +0100
 @@ -4263,7 +4263,7 @@
      dbg(lvl_debug,"enter");
      switch (attr->type) {

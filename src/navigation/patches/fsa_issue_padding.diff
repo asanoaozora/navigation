@@ -1,5 +1,5 @@
---- navit/navit/navit.c.orig	2022-02-16 16:55:55.674005283 +0100
-+++ navit/navit/navit.c	2022-02-17 11:53:41.937191527 +0100
+--- navit/navit.c	2022-02-16 16:55:55.674005283 +0100
++++ navit/navit.c	2022-02-17 11:53:41.937191527 +0100
 @@ -2436,12 +2436,12 @@
          offset = (max_offset - min_offset) / (max_offset_speed - min_offset_speed) * (nv->speed - min_offset_speed);
      }
