@@ -9,3 +9,4 @@
  	else()
  		message(FATAL_ERROR "no svg2png converter defined here.")
  	endif()
+ 
